@@ -1,15 +1,17 @@
+
 import React from 'react';
 import DiagramCanvas from '../components/DiagramCanvas';
 import { NodeData, EdgeData } from '../types';
 
 const UML: React.FC = () => {
     // Simplified Class Diagram
+    // Canvas Width ~720px
     const classNodes: NodeData[] = [
-        { id: '1', label: 'ExperimentManager', type: 'main', x: 300, y: 50, width: 200, height: 50, description: '+runSimulation()' },
-        { id: '2', label: 'QNNModel', type: 'process', x: 100, y: 200, width: 180, height: 60, description: '+applyUnitary()\n+entangle()' },
-        { id: '3', label: 'Agent', type: 'process', x: 100, y: 350, width: 180, height: 50, description: '-state: Qubit' },
-        { id: '4', label: 'Analyzer', type: 'process', x: 500, y: 200, width: 180, height: 60, description: '+calculatePhi()\n+getEntropy()' },
-        { id: '5', label: 'Metrics', type: 'database', x: 500, y: 350, width: 180, height: 50, description: 'Phi, MutualInfo' },
+        { id: '1', label: 'ExperimentManager', type: 'main', x: 260, y: 50, width: 200, height: 50, description: '+runSimulation()' },
+        { id: '2', label: 'QNNModel', type: 'process', x: 60, y: 200, width: 180, height: 60, description: '+applyUnitary()\n+entangle()' },
+        { id: '3', label: 'Agent', type: 'process', x: 60, y: 350, width: 180, height: 50, description: '-state: Qubit' },
+        { id: '4', label: 'Analyzer', type: 'process', x: 460, y: 200, width: 180, height: 60, description: '+calculatePhi()\n+getEntropy()' },
+        { id: '5', label: 'Metrics', type: 'database', x: 460, y: 350, width: 180, height: 50, description: 'Phi, MutualInfo' },
     ];
 
     const classEdges: EdgeData[] = [
@@ -29,7 +31,12 @@ const UML: React.FC = () => {
 
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
         <h3 className="text-lg font-bold text-slate-800 mb-4">Class Relationship Diagram</h3>
-        <DiagramCanvas nodes={classNodes} edges={classEdges} height={500} />
+        {/* CENTERED CONTAINER */}
+        <div className="w-full flex justify-center">
+            <div className="w-full max-w-[720px] border border-slate-100 rounded">
+                <DiagramCanvas nodes={classNodes} edges={classEdges} height={500} />
+            </div>
+        </div>
       </div>
 
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">

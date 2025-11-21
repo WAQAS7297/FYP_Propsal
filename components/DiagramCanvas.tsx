@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NodeData, EdgeData } from '../types';
 
@@ -9,7 +10,7 @@ interface DiagramCanvasProps {
 
 const DiagramCanvas: React.FC<DiagramCanvasProps> = ({ nodes, edges, height = 600 }) => {
   return (
-    <div className="w-full bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden relative" style={{ height: `${height}px` }}>
+    <div className="w-full relative" style={{ height: `${height}px` }}>
       <svg className="w-full h-full pointer-events-none absolute top-0 left-0">
         <defs>
           <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { LayoutDashboard, Network, GitGraph, Calendar, Database, FileText, Share2, BrainCircuit } from 'lucide-react';
+import { LayoutDashboard, Network, GitGraph, Calendar, Database, FileText, Share2, BrainCircuit, Briefcase } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface LayoutProps {
@@ -18,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { path: '/tech-stack', label: 'Tech Stack', icon: Database },
     { path: '/uml', label: 'UML & Structure', icon: FileText },
     { path: '/problem-solution', label: 'Problem vs Solution', icon: Share2 },
+    { path: '/applications', label: 'Applications', icon: Briefcase },
   ];
 
   return (

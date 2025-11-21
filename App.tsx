@@ -9,6 +9,7 @@ import Timeline from './pages/Timeline';
 import TechStack from './pages/TechStack';
 import UML from './pages/UML';
 import ProblemSolution from './pages/ProblemSolution';
+import Applications from './pages/Applications';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Route path="/tech-stack" element={<TechStack />} />
           <Route path="/uml" element={<UML />} />
           <Route path="/problem-solution" element={<ProblemSolution />} />
+          <Route path="/applications" element={<Applications />} />
         </Routes>
       </Layout>
     </Router>
